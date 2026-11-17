@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy - Retail Premium</title>
+<title>Privacy Policy - Retail Extension</title>
 <style>
   body { font-family: -apple-system, "Segoe UI", system-ui, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; line-height: 1.55; color: #16161a; background: #fff; }
-  .mark { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #a8832a; }
+  .mark { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #1971c2; }
   h1 { font-size: 1.6rem; margin: 0.2rem 0 0.4rem; }
   h2 { font-size: 1.2rem; margin-top: 2rem; }
   .updated { color: #666; font-size: 0.9rem; }
@@ -14,11 +14,11 @@
 </style>
 </head>
 <body>
-<div class="mark">Retail Premium</div>
+<div class="mark">Retail Extension</div>
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: 11 November 2026</p>
+<p class="updated">Last updated: 17 November 2026</p>
 
-<p>Retail Premium ("the extension") is a Chrome extension for pharmacies that use Script Sense. It records the
+<p>Retail Extension ("the extension") is a Chrome extension for pharmacies that use Script Sense. It records the
 sales taken on each computer's till and helps staff cash up that till at the end of the day. It is provided by
 Kieran Erasmuson ("we", "us"). It works alongside Script Sense but is not a Script Sense product. This policy
 explains what the extension reads, what it keeps, and where.</p>
@@ -28,7 +28,11 @@ explains what the extension reads, what it keeps, and where.</p>
   <li>The extension runs entirely in your browser and talks only to Script Sense.</li>
   <li>We operate no servers. Nothing the extension handles is sent to us, and there are no analytics, advertising
   or tracking.</li>
-  <li>It only reads from Script Sense. It never creates, changes or deletes anything in Script Sense.</li>
+  <li>It reads from Script Sense. It makes changes only through two optional shortcuts, using the staff member's
+  own sign-in: the stock-transfer shortcut, when staff confirm it, creates a stock transfer and removes those items
+  from the unpaid sale; the staff price key, when staff press it, changes the prices on that unpaid sale to the
+  pharmacy's staff price. Nothing else in Script Sense is created, changed or deleted.</li>
+  <li>Every feature and shortcut is off until staff turn it on in the extension's settings.</li>
   <li>It does not read or keep patient or customer details.</li>
 </ul>
 
@@ -45,7 +49,16 @@ and reads, for the pharmacy you are signed in to:</p>
   staff names;</li>
   <li>this computer's Script Sense hardware settings: the paired EFTPOS terminal, the payment types that open the
   cash drawer, and the receipt printer name;</li>
-  <li>presses of Script Sense's Open Cash Drawer button, counted as drawer opens with no sale.</li>
+  <li>presses of Script Sense's Open Cash Drawer button, counted as drawer opens with no sale, and, if the
+  pharmacy turns the option on, the reason staff type for the no-sale;</li>
+  <li>for the Till summary, the payments and account charges Script Sense holds for the days chosen, across the
+  whole pharmacy;</li>
+  <li>for the stock-transfer shortcut, when staff press it on a sale: the sale's items and quantities, the
+  pharmacies set up as suppliers, each item's last cost price, and, for pairing pharmacies with accounts in the
+  settings, the names of the pharmacy's accounts that match a search;</li>
+  <li>for the staff price key, when staff press it on a sale: the sale's items, quantities, prices and discounts,
+  each item's last cost and wholesale price, and the pharmacy's GST rate;</li>
+  <li>for the other keyboard shortcuts: nothing. They press the Script Sense buttons on the screen.</li>
 </ul>
 <p>The extension asks Script Sense for no patient or customer fields. This is the same access the signed-in user
 already has in Script Sense.</p>
@@ -53,16 +66,26 @@ already has in Script Sense.</p>
 <h2>What is kept, and where</h2>
 <ul>
   <li>In Chrome on that computer only: the till's name, location and settings; a reference list of the payments,
-  account charges and bills taken on the till (as above); petty cash and cash-removed entries with their reasons;
-  each cash-up with its counted amounts, notes and totals; the names of staff who took payments; and the Script
+  account charges and bills taken on the till (as above); petty cash and cash-removed entries and no-sale reasons;
+  each cash-up with its counted amounts, notes and totals; the names of staff who took payments; which features
+  and shortcuts are turned on and how many times each shortcut has been used; the staff price markup and key,
+  and which account each pharmacy's transfers are billed to; for each sale the staff price key repriced, the
+  items, their shelf and staff prices and who pressed the key; and the Script
   Sense sign-in token, which expires about an hour after it was issued.</li>
-  <li>Nothing is kept anywhere else. Removing the extension from Chrome deletes everything it stored. You can
-  export a backup file yourself from the extension's settings; that file stays wherever you save it.</li>
+  <li>Optional shared folder: if the pharmacy chooses a folder in the extension's settings (for example a drive
+  on its own network), each till computer saves a file there holding its till name, cash-ups and their totals,
+  petty cash, cash-removed and no-sale entries with reasons, staff names, and the reference numbers of the
+  payments and account charges it took. Every till computer that uses the same folder reads these files for the
+  Till summary. The folder belongs to the pharmacy; the extension never sends it anywhere else. Choosing
+  "Stop sharing" stops saving; files already there stay until the pharmacy deletes them.</li>
+  <li>Nothing is kept anywhere else. Removing the extension from Chrome deletes everything it stored in Chrome.
+  You can export a backup file yourself from the extension's settings; that file stays wherever you save it.</li>
 </ul>
 
 <h2>Sharing</h2>
 <p>We do not sell, share or transfer any data. The extension sends requests only to Script Sense
-(<code>scriptsense.co.nz</code>), using your own sign-in.</p>
+(<code>scriptsense.co.nz</code>), using your own sign-in. It writes to Script Sense only when staff confirm a stock transfer or press the staff price key, and otherwise
+writes only to a shared folder the pharmacy chooses itself.</p>
 
 <h2>Changes and contact</h2>
 <p>If this policy changes, the date at the top will change. Questions:
